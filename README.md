@@ -16,18 +16,18 @@ The IPL and other cricket related datasets are available at cricsheet.org. Feel 
 
 ### Learnings from the project
 
- -  Python 
+-  Python 
 
 -  Data Wrangling
 
-- Data Structure of Python, specifically, list, dictionary and list of dictionary 
+- Data Structure of Python, specially, list, dictionary and list of dictionaries 
 
 - Data Analysis
 
 
 ### Approach taken to solve the problem
 
- - First step was to load the data and understand the structure of data 
+- First step was to load the data and understand the structure of data 
 
 - Second, was to move one step at a time to answer the questions 
 
