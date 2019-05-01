@@ -47,43 +47,6 @@ second_innings_info = cricdata['innings'][1]['2nd innings']
 Number_of_deliveries_2ndinnings = len(second_innings_info['deliveries']) 
 print('{} were bowled in the second innings'.format(Number_of_deliveries_2ndinnings)) 
 
-#How many extras were bowled in the first and second innings respectively
-max_valid_deliveries = 120 
-
-first_innings_deliveries = first_innings_info['deliveries']
-
-n_extra_runs_first_innings = 0
-n_extras_first_innings = 0
-for delivery in first_innings_deliveries:
-    # Take the information out of the delivery, as it's a dict inside a dict
-    delivery_info = list(delivery.values())[0] 
-    runs_in_the_delivery = delivery_info['runs']['total']
-    extra_runs_in_the_delivery = delivery_info['runs']['extras']
-    n_extra_runs_first_innings += extra_runs_in_the_delivery # add to n_extras
-    #If number of extras is more than one then add 
-    if extra_runs_in_the_delivery >= 1:
-        n_extras_first_innings += 1
-
-print('{} extras were bowled and {} extra runs were taken in the first innings'.format(n_extras_first_innings, n_extra_runs_first_innings))
-
-# Second Innings Extras
-
-second_innings_deliveries = second_innings_info['deliveries']
-
-n_extra_runs_second_innings = 0
-n_extras_second_innings = 0
-for delivery in second_innings_deliveries:
-    # Take the information out of the delivery, as it's a dict inside a dict
-    delivery_info = list(delivery.values())[0] 
-    runs_in_the_delivery = delivery_info['runs']['total'] 
-    extra_runs_in_the_delivery = delivery_info['runs']['extras']
-    n_extra_runs_second_innings += extra_runs_in_the_delivery # add to n_extras
-    #If number of extras is more than one then add 
-    if extra_runs_in_the_delivery >= 1:
-        n_extras_second_innings += 1
-
-print('{} extras were bowled and {} extra runs were taken in the first innings'.format(n_extras_second_innings, n_extra_runs_second_innings))
-
 # Which team won and how ?
 
 winner = cricdata['info']['outcome']['winner']
